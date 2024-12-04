@@ -64,6 +64,18 @@ function solution2(input) {
 
   // create object to hold occurences of numbers in right array
   const rightCounts = {};
+
+  // for every number in the right array
+  for (const num of right) {
+    // if the number isn't already in the rightCounts object then set the value of that number to 0
+    if (rightCounts[num] === undefined) {
+      rightCounts[num] = 0;
+    }
+    // add 1 to the value of that key
+    rightCounts[num]++;
+  }
+
+  return rightCounts;
 }
 
 console.log(solution2(data));
