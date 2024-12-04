@@ -42,16 +42,17 @@ function solution1(input) {
   // destructure array from createArrays
   const [left, right] = createArrays(input);
 
-  const distances = [];
-
   // sort arrays
   const sortedLeft = left.toSorted();
   const sortedRight = right.toSorted();
 
+  // create the distances array and push the distance between each pair in
+  const distances = [];
   for (let i = 0; i < sortedLeft.length; i++) {
     distances.push(Math.abs(sortedLeft[i] - sortedRight[i]));
   }
 
+  // total all distances in the array
   return distances.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
   }, 0);
