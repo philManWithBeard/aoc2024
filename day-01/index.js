@@ -74,8 +74,16 @@ function solution2(input) {
     // add 1 to the value of that key
     rightCounts[num]++;
   }
+  // create similarity variable and set to zero
+  let similarity = 0;
 
-  return rightCounts;
+  // multiple each number on the left hand side by the number of occurences on the right, add it to the total
+  for (const num of left) {
+    const count = rightCounts[num] ?? 0;
+    similarity += num * count;
+  }
+
+  return similarity;
 }
 
 console.log(solution2(data));
