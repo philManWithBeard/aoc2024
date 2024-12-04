@@ -61,6 +61,9 @@ function solution1(input) {
 function solution2(input) {
   // destructure array from createArrays
   const [left, right] = createArrays(input);
+
+  // create object to hold occurences of numbers in right array
+  const rightCounts = {};
 }
 
 console.log(solution2(data));
