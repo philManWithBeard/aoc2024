@@ -86,4 +86,5 @@ function solution2(input) {
   return similarity;
 }
 
-console.log(solution2(data));
+console.log(`Solution 1: ${solution1(data)}`);
+console.log(`Solution 2: ${solution2(data)}`);
